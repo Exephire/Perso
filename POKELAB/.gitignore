@@ -1,0 +1,5 @@
+output/*
+!output/.gitkeep
+!output/demo_pokelab.mp4
+__pycache__/
+.venv/
