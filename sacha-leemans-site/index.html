@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sacha Leemans Créations</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Créations artisanales faites main par Sacha Leemans : bijoux, accessoires, décoration et pièces sur-mesure. Boutique en ligne, livraison soignée.">
+<meta property="og:title" content="Sacha Leemans Créations">
+<meta property="og:description" content="Pièces faites main, en petites séries. Bijoux, accessoires, déco et sur-mesure.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout : boutique d'atelier — grande typo éditoriale, grilles produit aérées, une seule couleur d'accent (vert sapin) posée sur un gris-sauge très pâle. */
+:root{
+  --bg:#F2F3EF;
+  --surface:#FFFFFF;
+  --surface-2:#E8EBE5;
+  --ink:#1B2220;
+  --muted:#5C6661;
+  --line:#D6DBD4;
+  --accent:#2E4A42;
+  --accent-ink:#FFFFFF;
+  --accent-soft:#DCE6E1;
+  --blush:#EBD3C8;
+  --danger:#A3402C;
+  --ok:#2F6B4F;
+  --shadow:0 18px 50px -22px rgba(20,30,27,.35);
+  --font-display:"Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body:"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-xs:.75rem; --fs-sm:.875rem; --fs-base:1rem; --fs-md:1.125rem; --fs-lg:1.5rem; --fs-xl:clamp(2rem,4vw,2.75rem); --fs-hero:clamp(2.75rem,7vw,5.5rem);
+  --radius:14px; --radius-sm:8px;
+  --gutter:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  --max:1240px;
+  --header-h:68px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111614; --surface:#181E1C; --surface-2:#1F2724; --ink:#E9EEEA; --muted:#9BA6A0; --line:#2B3431;
+    --accent:#A3C9BA; --accent-ink:#0E1412; --accent-soft:#22332D; --blush:#4A352E; --danger:#E5866F; --ok:#7FC3A1;
+    --shadow:0 18px 50px -22px rgba(0,0,0,.7); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111614; --surface:#181E1C; --surface-2:#1F2724; --ink:#E9EEEA; --muted:#9BA6A0; --line:#2B3431;
+  --accent:#A3C9BA; --accent-ink:#0E1412; --accent-soft:#22332D; --blush:#4A352E; --danger:#E5866F; --ok:#7FC3A1;
+  --shadow:0 18px 50px -22px rgba(0,0,0,.7); color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--fs-base);line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.eyebrow{font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.lead{font-size:var(--fs-md);color:var(--muted);max-width:56ch}
+.muted{color:var(--muted)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tnum{font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:0 1.4rem;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:var(--fs-sm);letter-spacing:.02em;cursor:pointer;text-decoration:none;transition:transform .15s ease,background .2s ease,color .2s ease,border-color .2s}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-block{width:100%}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.icon-btn{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:999px;border:0;background:transparent;cursor:pointer;color:var(--ink)}
+.icon-btn:hover{background:var(--surface-2)}
+.icon-btn svg{width:22px;height:22px}
+.count{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-weight:700;display:grid;place-items:center;line-height:1}
+.link{background:none;border:0;padding:0;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font-size:var(--fs-sm)}
+
+/* Bandeau + header */
+.announce{background:var(--accent);color:var(--accent-ink);font-size:var(--fs-xs);letter-spacing:.06em;text-align:center;padding-block:.55rem}
+.announce .wrap{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.announce span:nth-child(n+2){display:none}
+@media (min-width:860px){.announce span:nth-child(n+2){display:inline}}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+header.site .wrap{height:var(--header-h);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem}
+.logo{text-decoration:none;display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo b{font-family:var(--font-display);font-weight:400;font-size:1.65rem;letter-spacing:-.01em}
+.logo small{font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+nav.main{display:none;gap:1.6rem}
+nav.main a{text-decoration:none;font-size:var(--fs-sm);font-weight:500;padding-block:.4rem;border-bottom:1px solid transparent}
+nav.main a:hover,nav.main a[aria-current="page"]{border-color:var(--ink)}
+.h-left{display:flex;align-items:center;gap:.25rem}
+.h-right{display:flex;justify-content:flex-end;align-items:center;gap:.15rem}
+@media (min-width:960px){nav.main{display:flex}.burger{display:none!important}}
+@media (max-width:959px){header.site .wrap{grid-template-columns:auto 1fr auto;gap:.25rem}header.site .logo{align-items:flex-start;padding-left:.25rem}header.site .logo b{font-size:1.3rem}}
+
+/* Vues */
+main{min-height:60vh}
+[data-view]{animation:fade .35s ease}
+@keyframes fade{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+section.band{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.sec-head h2{font-size:var(--fs-xl)}
+
+/* Hero */
+.hero{padding-block:clamp(2rem,5vw,4rem) clamp(3rem,6vw,5rem)}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.05fr .95fr;gap:4rem}}
+.hero h1{font-size:var(--fs-hero);margin-block:1rem 1.4rem}
+.hero .cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2rem}
+.hero-proof{display:flex;gap:1.75rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.hero-proof div{display:flex;flex-direction:column}
+.hero-proof b{font-family:var(--font-display);font-weight:400;font-size:1.9rem;line-height:1}
+.hero-proof span{font-size:var(--fs-xs);color:var(--muted);letter-spacing:.04em}
+.collage{position:relative;aspect-ratio:1/1.05;max-width:100%}
+.collage .ph{position:absolute;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.collage .ph svg{width:100%;height:100%}
+.collage .p1{inset:0 22% 18% 0}
+.collage .p2{width:44%;aspect-ratio:4/5;right:0;top:12%}
+.collage .p3{width:38%;aspect-ratio:1;right:10%;bottom:0}
+.collage .tag{position:absolute;left:6%;bottom:8%;background:var(--surface);color:var(--ink);border-radius:999px;padding:.55rem 1rem;font-size:var(--fs-xs);font-weight:600;box-shadow:var(--shadow);display:flex;gap:.5rem;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);display:inline-block}
+
+/* Réassurance */
+.assure{border-block:1px solid var(--line);background:var(--surface)}
+.assure .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;padding-block:1.5rem}
+@media (min-width:860px){.assure .wrap{grid-template-columns:repeat(4,1fr)}}
+.assure div{display:flex;gap:.8rem;align-items:flex-start;font-size:var(--fs-sm)}
+.assure svg{width:24px;height:24px;flex:none;color:var(--accent)}
+.assure b{display:block;font-weight:600}
+.assure span{color:var(--muted);font-size:var(--fs-xs)}
+
+/* Catégories */
+.cats{display:grid;gap:1rem;grid-template-columns:repeat(2,1fr)}
+@media (min-width:860px){.cats{grid-template-columns:repeat(4,1fr)}}
+.cat{position:relative;border-radius:var(--radius);overflow:hidden;text-decoration:none;aspect-ratio:3/4;display:block;isolation:isolate}
+.cat svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s ease;z-index:-1}
+.cat:hover svg{transform:scale(1.05)}
+.cat .lbl{position:absolute;left:0;right:0;bottom:0;padding:1rem 1.1rem;display:flex;justify-content:space-between;align-items:end;color:#fff;background:linear-gradient(transparent,rgba(10,16,14,.55))}
+.cat .lbl b{font-family:var(--font-display);font-weight:400;font-size:1.6rem;line-height:1}
+.cat .lbl span{font-size:var(--fs-xs);opacity:.9}
+
+/* Grille produit */
+.grid{display:grid;gap:2rem 1rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:2.5rem 1.5rem}}
+@media (min-width:1180px){.grid.g4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{position:relative;display:flex;flex-direction:column;gap:.7rem;min-width:0}
+.card .media{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:var(--surface-2)}
+.card .media a{display:block;height:100%}
+.card .media svg{width:100%;height:100%;transition:transform .6s ease}
+.card:hover .media svg{transform:scale(1.04)}
+.badge{position:absolute;top:.7rem;left:.7rem;background:var(--surface);color:var(--ink);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .6rem;border-radius:999px}
+.badge.out{background:var(--ink);color:var(--bg)}
+.fav{position:absolute;top:.5rem;right:.5rem;background:var(--surface);width:38px;height:38px}
+.fav svg{width:18px;height:18px}
+.fav[aria-pressed="true"] svg{fill:var(--danger);stroke:var(--danger)}
+.quick{position:absolute;left:.6rem;right:.6rem;bottom:.6rem;min-height:42px;opacity:0;transform:translateY(8px);transition:.25s ease}
+.card:hover .quick,.card:focus-within .quick{opacity:1;transform:none}
+@media (hover:none){.quick{display:none}}
+.card h3{font-family:var(--font-body);font-size:var(--fs-sm);font-weight:600;line-height:1.35}
+.card h3 a{text-decoration:none}
+.card .meta{display:flex;justify-content:space-between;gap:.5rem;font-size:var(--fs-sm);align-items:baseline}
+.card .meta .cat-n{color:var(--muted);font-size:var(--fs-xs)}
+.swatches{display:flex;gap:4px}
+.swatches i{width:10px;height:10px;border-radius:50%;border:1px solid var(--line)}
+
+/* Processus */
+.process{background:var(--surface)}
+.process .wrap{display:grid;gap:3rem}
+@media (min-width:900px){.process .wrap{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.steps{display:grid;gap:0;counter-reset:s}
+.step{display:grid;grid-template-columns:3.5rem 1fr;gap:1rem;padding-block:1.4rem;border-top:1px solid var(--line)}
+.step:last-child{border-bottom:1px solid var(--line)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--font-display);font-size:2rem;line-height:1;color:var(--accent)}
+.step h3{font-size:1.5rem;margin-bottom:.35rem}
+.step p{color:var(--muted);font-size:var(--fs-sm);max-width:52ch}
+
+/* Sur-mesure CTA */
+.custom-cta .box{display:grid;gap:2rem;border-radius:calc(var(--radius) * 1.6);background:var(--accent);color:var(--accent-ink);padding:clamp(2rem,5vw,4rem);overflow:hidden;position:relative}
+@media (min-width:900px){.custom-cta .box{grid-template-columns:1.2fr .8fr;align-items:center}}
+.custom-cta h2{font-size:var(--fs-xl)}
+.custom-cta h2 em{color:inherit}
+.custom-cta p{opacity:.85;margin-top:1rem;max-width:50ch}
+.custom-cta .btn{background:var(--accent-ink);color:var(--accent)}
+.custom-cta ul{list-style:none;padding:0;margin:0;display:grid;gap:.7rem;font-size:var(--fs-sm)}
+.custom-cta li{display:flex;gap:.6rem;align-items:center;border-bottom:1px solid color-mix(in srgb,var(--accent-ink) 25%,transparent);padding-bottom:.7rem}
+
+/* Avis */
+.reviews{display:grid;gap:1rem}
+@media (min-width:860px){.reviews{grid-template-columns:repeat(3,1fr)}}
+.review{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;display:flex;flex-direction:column;gap:1rem}
+.stars{color:var(--accent);letter-spacing:.15em;font-size:var(--fs-sm)}
+.review blockquote{margin:0;font-family:var(--font-display);font-size:1.4rem;line-height:1.25}
+.review footer{font-size:var(--fs-xs);color:var(--muted);margin-top:auto}
+
+/* Instagram */
+.insta{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+@media (min-width:860px){.insta{grid-template-columns:repeat(6,1fr)}}
+.insta a{position:relative;aspect-ratio:1;border-radius:var(--radius-sm);overflow:hidden;display:block}
+.insta a svg{width:100%;height:100%;transition:transform .5s}
+.insta a:hover svg{transform:scale(1.07)}
+
+/* Newsletter */
+.news{text-align:center}
+.news h2{font-size:var(--fs-xl)}
+.news form{display:flex;gap:.5rem;max-width:460px;margin:1.6rem auto 0;flex-wrap:wrap}
+.news input{flex:1 1 220px}
+
+/* Formulaires */
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.field label,.label{font-size:var(--fs-xs);font-weight:600;letter-spacing:.04em}
+input[type=text],input[type=email],input[type=tel],input[type=search],input[type=number],input[type=date],select,textarea{width:100%;min-height:48px;padding:.7rem .95rem;border-radius:var(--radius-sm);border:1px solid var(--line);background:var(--surface);transition:border-color .2s}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+[aria-invalid="true"]{border-color:var(--danger)!important}
+.err{color:var(--danger);font-size:var(--fs-xs);min-height:0}
+.row{display:grid;gap:1rem}
+@media (min-width:640px){.row.c2{grid-template-columns:1fr 1fr}.row.c3{grid-template-columns:1fr 2fr}}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-size:var(--fs-sm)}
+.check input{width:18px;height:18px;margin-top:3px;accent-color:var(--accent)}
+.choice{display:flex;align-items:center;gap:.9rem;padding:1rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);cursor:pointer}
+.choice:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.choice input{accent-color:var(--accent);width:18px;height:18px}
+.choice .grow{flex:1;min-width:0}
+.choice b{display:block;font-size:var(--fs-sm)}
+.choice small{color:var(--muted)}
+
+/* Boutique */
+.shop-head{padding-block:2.5rem 1.5rem}
+.shop-head h1{font-size:var(--fs-hero)}
+.toolbar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;padding-block:1rem;border-block:1px solid var(--line);margin-bottom:2rem;background:var(--bg);z-index:5}
+@media (min-width:900px){.toolbar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--header-h))}}
+.chips{display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;max-width:100%;padding-block:2px}
+.chip{flex:none;border:1px solid var(--line);background:transparent;border-radius:999px;padding:.45rem .95rem;font-size:var(--fs-sm);cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.tools input[type=search]{min-height:40px;flex:1 1 160px;width:200px;border-radius:999px}
+.tools select{min-height:40px;width:auto;border-radius:999px;padding-block:0}
+.empty{text-align:center;padding:4rem 1rem;color:var(--muted)}
+.empty h3{font-size:1.8rem;color:var(--ink);margin-bottom:.5rem}
+
+/* Fiche produit */
+.crumbs{font-size:var(--fs-xs);color:var(--muted);padding-block:1.4rem;display:flex;gap:.5rem;flex-wrap:wrap}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.pdp{display:grid;gap:2.5rem;padding-bottom:4rem}
+@media (min-width:900px){.pdp{grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}}
+.gallery{display:grid;gap:.75rem;min-width:0}
+.gallery .main-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:var(--surface-2)}
+.gallery .main-img svg{width:100%;height:100%}
+.thumbs{display:flex;gap:.6rem}
+.thumbs button{width:76px;aspect-ratio:4/5;border-radius:var(--radius-sm);overflow:hidden;border:2px solid transparent;padding:0;cursor:pointer;background:none}
+.thumbs button[aria-current="true"]{border-color:var(--ink)}
+.thumbs svg{width:100%;height:100%}
+.buy{display:flex;flex-direction:column;gap:1.3rem;min-width:0}
+@media (min-width:900px){.buy{position:sticky;top:calc(var(--header-h) + 2rem)}}
+.buy h1{font-size:clamp(2.4rem,5vw,3.6rem)}
+.price{font-size:1.4rem;font-weight:500}
+.stock{font-size:var(--fs-sm);display:flex;gap:.5rem;align-items:center}
+.stock.low .dot{background:#C98A2B}
+.stock.none .dot{background:var(--danger)}
+.opts{display:flex;gap:.5rem;flex-wrap:wrap}
+.opt{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.55rem 1rem;font-size:var(--fs-sm);cursor:pointer;min-height:42px}
+.opt[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:var(--surface);height:48px}
+.qty button{width:44px;height:100%;border:0;background:none;cursor:pointer;font-size:1.1rem}
+.qty output{min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
+.buy-row{display:flex;gap:.6rem;flex-wrap:wrap}
+.buy-row .btn-primary{flex:1 1 160px}
+.acc{border-top:1px solid var(--line)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;padding:1.1rem 0;display:flex;justify-content:space-between;font-weight:600;font-size:var(--fs-sm)}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font-weight:400;font-size:1.2rem;line-height:1}
+.acc details[open] summary::after{content:"–"}
+.acc .body{padding-bottom:1.2rem;color:var(--muted);font-size:var(--fs-sm);display:grid;gap:.6rem}
+.acc .body ul{margin:0;padding-left:1.1rem}
+.perks{display:grid;gap:.5rem;font-size:var(--fs-sm);color:var(--muted)}
+.perks div{display:flex;gap:.6rem;align-items:center}
+.perks svg{width:18px;height:18px;color:var(--accent);flex:none}
+
+/* Tiroirs */
+.overlay{position:fixed;inset:0;background:rgba(10,15,13,.45);z-index:80;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;right:0;width:min(440px,100%);background:var(--bg);z-index:90;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer.left{right:auto;left:0;transform:translateX(-100%);padding-right:0;padding-left:env(safe-area-inset-left,0px)}
+.drawer.on{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;border-bottom:1px solid var(--line)}
+.drawer-head h2{font-size:1.8rem}
+.drawer-body{flex:1;overflow-y:auto;padding:1.25rem}
+.drawer-foot{border-top:1px solid var(--line);padding:1.25rem;display:grid;gap:.9rem;background:var(--surface)}
+.ship-bar{font-size:var(--fs-xs);display:grid;gap:.4rem}
+.ship-bar .bar{height:5px;border-radius:9px;background:var(--surface-2);overflow:hidden}
+.ship-bar .bar i{display:block;height:100%;background:var(--accent);transition:width .4s}
+.line{display:grid;grid-template-columns:76px 1fr auto;gap:1rem;padding-block:1rem;border-bottom:1px solid var(--line);align-items:start}
+.line .th{border-radius:var(--radius-sm);overflow:hidden;aspect-ratio:4/5}
+.line .th svg{width:100%;height:100%}
+.line h4{margin:0;font-size:var(--fs-sm);font-weight:600}
+.line small{display:block;color:var(--muted);font-size:var(--fs-xs)}
+.line .qty{height:36px;margin-top:.5rem}
+.line .qty button{width:32px}
+.line .right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;font-size:var(--fs-sm)}
+.totals{display:grid;gap:.4rem;font-size:var(--fs-sm)}
+.totals div{display:flex;justify-content:space-between;gap:1rem}
+.totals .grand{font-size:var(--fs-md);font-weight:700;padding-top:.6rem;border-top:1px solid var(--line);margin-top:.3rem}
+.promo{display:flex;gap:.5rem}
+.promo input{min-height:42px}
+.promo .btn{min-height:42px}
+.mnav{display:flex;flex-direction:column}
+.mnav a{text-decoration:none;font-family:var(--font-display);font-size:2rem;padding-block:.6rem;border-bottom:1px solid var(--line)}
+
+/* Commande */
+.checkout{display:grid;gap:2.5rem;padding-block:2rem 5rem}
+@media (min-width:960px){.checkout{grid-template-columns:1.2fr .8fr;gap:4rem;align-items:start}}
+.progress{display:flex;gap:.5rem;margin-bottom:2rem;list-style:none;padding:0;counter-reset:p;flex-wrap:wrap}
+.progress li{counter-increment:p;display:flex;align-items:center;gap:.5rem;font-size:var(--fs-sm);color:var(--muted)}
+.progress li::before{content:counter(p);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);font-size:var(--fs-xs);font-weight:700}
+.progress li:not(:last-child)::after{content:"";width:28px;height:1px;background:var(--line)}
+.progress li.on{color:var(--ink);font-weight:600}
+.progress li.on::before{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.progress li.done::before{content:"✓";background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:1rem;min-width:0}
+legend{font-family:var(--font-display);font-size:2rem;margin-bottom:1rem;padding:0}
+.co-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
+.summary{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;display:grid;gap:1rem}
+@media (min-width:960px){.summary{position:sticky;top:calc(var(--header-h) + 2rem)}}
+.summary h2{font-size:1.6rem}
+.note{font-size:var(--fs-xs);color:var(--muted);display:flex;gap:.5rem;align-items:flex-start}
+.note svg{width:16px;height:16px;flex:none;margin-top:2px}
+.paylogos{display:flex;gap:.4rem;flex-wrap:wrap}
+.paylogos span{font-size:.66rem;font-weight:700;letter-spacing:.04em;border:1px solid var(--line);border-radius:5px;padding:.2rem .45rem;color:var(--muted);background:var(--surface)}
+
+/* Pages contenu */
+.page-hero{padding-block:3rem 2rem}
+.page-hero h1{font-size:var(--fs-hero)}
+.prose{max-width:68ch;display:grid;gap:1rem;color:var(--muted)}
+.prose h2{color:var(--ink);font-size:1.8rem;margin-top:1.5rem}
+.prose strong{color:var(--ink)}
+.split{display:grid;gap:3rem;padding-bottom:5rem}
+@media (min-width:900px){.split{grid-template-columns:1fr 1fr;gap:4rem;align-items:start}}
+.portrait{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.portrait svg{width:100%;height:100%}
+.values{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin-top:1rem}
+.value{border-top:2px solid var(--accent);padding-top:1rem}
+.value b{font-family:var(--font-display);font-weight:400;font-size:1.5rem;display:block;color:var(--ink)}
+.value p{font-size:var(--fs-sm)}
+.card-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.25rem,3vw,2rem);display:grid;gap:1rem}
+.contact-list{display:grid;gap:1rem;font-size:var(--fs-sm)}
+.contact-list div{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:.8rem;flex-wrap:wrap}
+.copy{font-size:var(--fs-xs)}
+.thanks{text-align:center;padding-block:5rem;display:grid;gap:1.2rem;justify-items:center}
+.thanks .seal{width:84px;height:84px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.thanks .seal svg{width:38px;height:38px}
+.thanks h1{font-size:var(--fs-hero)}
+
+/* Footer */
+footer.site{background:var(--surface);border-top:1px solid var(--line);margin-top:2rem;padding-bottom:env(safe-area-inset-bottom,0px)}
+.f-top{display:grid;gap:2.5rem;padding-block:4rem 3rem}
+@media (min-width:860px){.f-top{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.f-top h4{font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;margin:0 0 1rem;color:var(--muted)}
+.f-top ul{list-style:none;padding:0;margin:0;display:grid;gap:.55rem;font-size:var(--fs-sm)}
+.f-top ul a{text-decoration:none}
+.f-top ul a:hover{text-decoration:underline}
+.f-bottom{border-top:1px solid var(--line);padding-block:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:var(--fs-xs);color:var(--muted);align-items:center}
+
+/* Toast + cookies */
+.toast{position:fixed;left:50%;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));transform:translate(-50%,150%);background:var(--ink);color:var(--bg);padding:.85rem 1.2rem;border-radius:999px;font-size:var(--fs-sm);z-index:100;transition:transform .35s cubic-bezier(.2,.8,.2,1);display:flex;gap:1rem;align-items:center;max-width:calc(100% - 32px);box-shadow:var(--shadow)}
+.toast.on{transform:translate(-50%,0)}
+.toast button{background:none;border:0;color:inherit;text-decoration:underline;cursor:pointer;font-weight:600;padding:0}
+.cookie{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:95;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.2rem;display:grid;gap:1rem;max-width:520px;font-size:var(--fs-sm)}
+.cookie .acts{display:flex;gap:.5rem;flex-wrap:wrap}
+.cookie .btn{min-height:40px}
+</style>
+</head>
+<body>
+
+<div class="announce"><div class="wrap"><span>Livraison offerte dès 60 € d'achat</span><span>Chaque pièce est façonnée à la main</span><span>Retours gratuits sous 14 jours</span></div></div>
+
+<header class="site">
+  <div class="wrap">
+    <div class="h-left">
+      <button class="icon-btn burger" id="btn-menu" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+      <nav class="main" aria-label="Navigation principale">
+        <a href="#boutique">Boutique</a>
+        <a href="#sur-mesure">Sur-mesure</a>
+        <a href="#atelier">L'atelier</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <a class="logo" href="#accueil" aria-label="Sacha Leemans Créations, accueil"><b>Sacha Leemans</b><small>Créations</small></a>
+    <div class="h-right">
+      <button class="icon-btn" id="btn-search" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+      </button>
+      <a class="icon-btn" href="#favoris" aria-label="Mes favoris">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <span class="count" id="fav-count" hidden>0</span>
+      </a>
+      <button class="icon-btn" id="btn-cart" aria-label="Ouvrir le panier" aria-controls="cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+        <span class="count" id="cart-count" hidden>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ACCUEIL -->
+<div data-view="accueil">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Atelier de création · Pièces faites main</p>
+        <h1>Des créations faites main, <em>pensées pour durer.</em></h1>
+        <p class="lead">Bijoux, accessoires et objets de décoration façonnés un à un à l'atelier, en petites séries. Chaque pièce porte les traces de la main qui l'a faite.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#boutique">Découvrir la boutique</a>
+          <a class="btn btn-ghost" href="#sur-mesure">Demander une pièce sur-mesure</a>
+        </div>
+        <div class="hero-proof">
+          <div><b class="tnum">4,9/5</b><span>Note moyenne des avis</span></div>
+          <div><b class="tnum">+1 200</b><span>Pièces envoyées</span></div>
+          <div><b class="tnum">48 h</b><span>Délai d'expédition</span></div>
+        </div>
+      </div>
+      <div class="collage" id="hero-collage" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="assure">
+    <div class="wrap">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 11V7a5 5 0 0 1 10 0"/><path d="M4 11h16v4a8 8 0 0 1-16 0z"/></svg><p><b>Fait main</b><span>Façonné à l'atelier, pièce par pièce</span></p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><p><b>Livraison soignée</b><span>Offerte dès 60 €, emballage recyclé</span></p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><p><b>Paiement sécurisé</b><span>Carte, Bancontact, PayPal, Apple Pay</span></p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12a8 8 0 1 0 2.3-5.6"/><path d="M4 4v4h4"/></svg><p><b>Retours 14 jours</b><span>Satisfaite ou remboursée</span></p></div>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Les collections</p><h2>Trouver sa pièce</h2></div>
+        <a class="link" href="#boutique">Tout voir</a>
+      </div>
+      <div class="cats" id="home-cats"></div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Fraîchement sorties de l'atelier</p><h2>Nouveautés &amp; coups de cœur</h2></div>
+        <a class="link" href="#boutique">Voir toute la boutique</a>
+      </div>
+      <div class="grid g4" id="home-new"></div>
+    </div>
+  </section>
+
+  <section class="band process">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Le savoir-faire</p>
+        <h2 style="font-size:var(--fs-xl);margin-block:.6rem 1rem">De l'esquisse <em>à votre porte</em></h2>
+        <p class="lead">Rien n'est produit en série. Chaque création suit les mêmes étapes, à la main, du premier croquis jusqu'à l'emballage.</p>
+        <a class="btn btn-ghost" href="#atelier" style="margin-top:1.8rem">Visiter l'atelier</a>
+      </div>
+      <div class="steps">
+        <div class="step"><div><h3>Le dessin</h3><p>Tout commence dans un carnet : une forme, une matière, une couleur. Les idées sont testées en maquette avant d'être retenues.</p></div></div>
+        <div class="step"><div><h3>Le façonnage</h3><p>Chaque pièce est travaillée à la main, sans moule industriel. C'est ce qui rend deux créations jamais tout à fait identiques.</p></div></div>
+        <div class="step"><div><h3>Les finitions</h3><p>Ponçage, polissage, contrôle : la pièce n'est mise en vente qu'une fois parfaite à l'œil comme au toucher.</p></div></div>
+        <div class="step"><div><h3>L'emballage</h3><p>Papier recyclé, carte écrite à la main, expédition sous 48 h. Prêt à offrir, sans surcoût.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band custom-cta">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <p class="eyebrow" style="color:inherit;opacity:.75">Sur-mesure</p>
+          <h2>Une idée précise ? <em>Créons-la ensemble.</em></h2>
+          <p>Cadeau de naissance, bijou de mariage, pièce assortie à votre intérieur : décrivez votre projet et recevez une proposition chiffrée sous 72 h.</p>
+          <a class="btn" href="#sur-mesure" style="margin-top:1.8rem">Lancer mon projet</a>
+        </div>
+        <ul>
+          <li>✦ Croquis et devis gratuits</li>
+          <li>✦ Gravure et initiales possibles</li>
+          <li>✦ Délai moyen de 2 à 3 semaines</li>
+          <li>✦ Échanges directs avec la créatrice</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">Ils en parlent</p><h2>Avis clientes</h2></div><p class="muted" style="font-size:var(--fs-sm)"><span class="stars">★★★★★</span> 4,9/5 sur 186 avis vérifiés</p></div>
+      <div class="reviews">
+        <article class="review"><div class="stars" aria-label="5 étoiles sur 5">★★★★★</div><blockquote>« Les boucles sont encore plus belles en vrai. L'emballage m'a fait sourire. »</blockquote><footer>Camille · Boucles Galet</footer></article>
+        <article class="review"><div class="stars" aria-label="5 étoiles sur 5">★★★★★</div><blockquote>« Commande sur-mesure pour un cadeau de naissance : écoute, conseils, résultat parfait. »</blockquote><footer>Julien · Projet sur-mesure</footer></article>
+        <article class="review"><div class="stars" aria-label="5 étoiles sur 5">★★★★★</div><blockquote>« Reçu en deux jours, le vase trône dans mon salon. On sent le travail de la main. »</blockquote><footer>Inès · Vase Dune</footer></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">Instagram</p><h2>@sachaleemanscreations</h2></div><a class="btn btn-ghost" href="https://www.instagram.com/sachaleemanscreations/" target="_blank" rel="noopener">Suivre sur Instagram</a></div>
+      <div class="insta" id="home-insta"></div>
+    </div>
+  </section>
+
+  <section class="band news" style="background:var(--surface)">
+    <div class="wrap">
+      <p class="eyebrow">La lettre de l'atelier</p>
+      <h2 style="margin-top:.6rem">-10 % sur votre première commande</h2>
+      <p class="lead" style="margin:1rem auto 0">Nouvelles collections en avant-première, coulisses de l'atelier et ventes privées. Une lettre par mois, pas plus.</p>
+      <form id="news-form" novalidate>
+        <label class="sr" for="news-email">Adresse e-mail</label>
+        <input type="email" id="news-email" placeholder="votre@email.com" required autocomplete="email">
+        <button class="btn btn-primary" type="submit">Je m'inscris</button>
+      </form>
+      <p class="err" id="news-err" role="alert" style="margin-top:.5rem"></p>
+    </div>
+  </section>
+</div>
+
+<!-- BOUTIQUE -->
+<div data-view="boutique" hidden>
+  <div class="wrap">
+    <div class="shop-head">
+      <p class="eyebrow">La boutique</p>
+      <h1 id="shop-title">Toutes les créations</h1>
+    </div>
+    <div class="toolbar">
+      <div class="chips" id="shop-chips" role="group" aria-label="Filtrer par catégorie"></div>
+      <div class="tools">
+        <label class="sr" for="shop-q">Rechercher une création</label>
+        <input type="search" id="shop-q" placeholder="Rechercher…">
+        <label class="sr" for="shop-sort">Trier</label>
+        <select id="shop-sort">
+          <option value="pop">Popularité</option>
+          <option value="new">Nouveautés</option>
+          <option value="asc">Prix croissant</option>
+          <option value="desc">Prix décroissant</option>
+        </select>
+        <label class="check" style="align-items:center"><input type="checkbox" id="shop-stock"> En stock</label>
+      </div>
+    </div>
+    <p class="muted" id="shop-count" style="font-size:var(--fs-sm);margin-bottom:1.2rem"></p>
+    <div class="grid" id="shop-grid"></div>
+    <div style="height:5rem"></div>
+  </div>
+</div>
+
+<!-- PRODUIT -->
+<div data-view="produit" hidden>
+  <div class="wrap" id="pdp"></div>
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><h2>Vous aimerez aussi</h2></div>
+      <div class="grid g4" id="related"></div>
+    </div>
+  </section>
+</div>
+
+<!-- FAVORIS -->
+<div data-view="favoris" hidden>
+  <div class="wrap">
+    <div class="page-hero"><p class="eyebrow">Ma sélection</p><h1>Mes favoris</h1></div>
+    <div class="grid g4" id="fav-grid"></div>
+    <div style="height:5rem"></div>
+  </div>
+</div>
+
+<!-- SUR-MESURE -->
+<div data-view="sur-mesure" hidden>
+  <div class="wrap">
+    <div class="page-hero">
+      <p class="eyebrow">Commande personnalisée</p>
+      <h1>Votre pièce, <em>sur-mesure.</em></h1>
+      <p class="lead" style="margin-top:1rem">Décrivez votre idée. Vous recevez un croquis et un devis gratuits sous 72 h, sans engagement.</p>
+    </div>
+    <div class="split">
+      <form class="card-box" id="custom-form" novalidate>
+        <div class="row c2">
+          <div class="field"><label for="cu-name">Prénom et nom</label><input type="text" id="cu-name" required autocomplete="name"><span class="err"></span></div>
+          <div class="field"><label for="cu-email">E-mail</label><input type="email" id="cu-email" required autocomplete="email"><span class="err"></span></div>
+        </div>
+        <div class="row c2">
+          <div class="field"><label for="cu-type">Type de création</label>
+            <select id="cu-type" required><option value="">Choisir…</option><option>Bijou</option><option>Accessoire</option><option>Objet de décoration</option><option>Coffret cadeau</option><option>Autre</option></select><span class="err"></span></div>
+          <div class="field"><label for="cu-budget">Budget indicatif</label>
+            <select id="cu-budget"><option>Moins de 50 €</option><option selected>50 à 100 €</option><option>100 à 200 €</option><option>Plus de 200 €</option></select></div>
+        </div>
+        <div class="row c2">
+          <div class="field"><label for="cu-date">Pour quand ? (facultatif)</label><input type="date" id="cu-date"></div>
+          <div class="field"><label for="cu-occ">Occasion</label><select id="cu-occ"><option>Pour moi</option><option>Anniversaire</option><option>Naissance</option><option>Mariage</option><option>Fête des mères</option><option>Autre</option></select></div>
+        </div>
+        <div class="field"><label for="cu-msg">Votre idée</label><textarea id="cu-msg" required placeholder="Formes, couleurs, matières, initiales à graver…"></textarea><span class="err"></span></div>
+        <div class="field"><label for="cu-file">Images d'inspiration (facultatif)</label><input type="file" id="cu-file" accept="image/*" multiple><small class="muted" id="cu-file-info" style="font-size:var(--fs-xs)">JPG ou PNG, 5 fichiers maximum.</small></div>
+        <button class="btn btn-primary" type="submit">Envoyer ma demande</button>
+      </form>
+      <div style="display:grid;gap:1.5rem">
+        <div class="portrait" id="custom-art" aria-hidden="true"></div>
+        <div class="steps">
+          <div class="step"><div><h3>Votre demande</h3><p>Vous décrivez votre projet avec quelques mots ou une photo.</p></div></div>
+          <div class="step"><div><h3>Croquis &amp; devis</h3><p>Sous 72 h, une proposition illustrée avec prix et délai.</p></div></div>
+          <div class="step"><div><h3>Création</h3><p>Après validation et acompte de 30 %, la pièce prend forme à l'atelier.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ATELIER -->
+<div data-view="atelier" hidden>
+  <div class="wrap">
+    <div class="page-hero"><p class="eyebrow">L'atelier</p><h1>Derrière <em>chaque pièce.</em></h1></div>
+    <div class="split">
+      <div class="portrait" id="about-art" aria-hidden="true"></div>
+      <div class="prose">
+        <p style="font-family:var(--font-display);font-size:1.7rem;line-height:1.25;color:var(--ink)">« Je crée des objets que l'on garde longtemps, que l'on transmet, et qui racontent quelque chose de la personne qui les porte. »</p>
+        <p>Sacha Leemans Créations est né d'une passion pour le fait main et les belles matières. Ce qui a commencé autour d'une table de cuisine est devenu un atelier où chaque création est imaginée, façonnée et emballée par la même paire de mains.</p>
+        <p>Ici, pas de stock géant ni de production délocalisée : des petites séries, des pièces uniques, et du temps pris pour bien faire. Les matériaux sont choisis pour leur qualité et, autant que possible, auprès de fournisseurs locaux.</p>
+        <h2>Ce qui guide l'atelier</h2>
+        <div class="values">
+          <div class="value"><b>Fait main</b><p>Chaque pièce passe entre les mains de la créatrice, de l'idée à l'emballage.</p></div>
+          <div class="value"><b>Durable</b><p>Matières choisies pour durer, emballages recyclés, zéro plastique.</p></div>
+          <div class="value"><b>Proche</b><p>Une vraie personne répond à vos messages, et elle connaît chaque pièce.</p></div>
+        </div>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem"><a class="btn btn-primary" href="#boutique">Voir les créations</a><a class="btn btn-ghost" href="#contact">Écrire à Sacha</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT + FAQ -->
+<div data-view="contact" hidden>
+  <div class="wrap">
+    <div class="page-hero"><p class="eyebrow">Contact</p><h1>Une question ? <em>Écrivez-moi.</em></h1><p class="lead" style="margin-top:1rem">Réponse sous 24 h ouvrées. Pour une création personnalisée, passez plutôt par la page <a href="#sur-mesure">sur-mesure</a>.</p></div>
+    <div class="split">
+      <form class="card-box" id="contact-form" novalidate>
+        <div class="row c2">
+          <div class="field"><label for="ct-name">Nom</label><input type="text" id="ct-name" required autocomplete="name"><span class="err"></span></div>
+          <div class="field"><label for="ct-email">E-mail</label><input type="email" id="ct-email" required autocomplete="email"><span class="err"></span></div>
+        </div>
+        <div class="field"><label for="ct-subject">Sujet</label><select id="ct-subject"><option>Question sur un produit</option><option>Suivi de commande</option><option>Retour ou échange</option><option>Partenariat / revendeur</option><option>Autre</option></select></div>
+        <div class="field"><label for="ct-order">N° de commande (facultatif)</label><input type="text" id="ct-order" placeholder="SL-2026-0000"></div>
+        <div class="field"><label for="ct-msg">Message</label><textarea id="ct-msg" required></textarea><span class="err"></span></div>
+        <label class="check"><input type="checkbox" id="ct-rgpd" required> <span>J'accepte que mes données soient utilisées pour répondre à ma demande (<a href="#confidentialite">politique de confidentialité</a>).</span></label>
+        <span class="err" id="ct-rgpd-err"></span>
+        <button class="btn btn-primary" type="submit">Envoyer le message</button>
+      </form>
+      <div style="display:grid;gap:2rem">
+        <div class="contact-list">
+          <div><span class="muted">E-mail</span><span><span id="mail-txt">contact@sachaleemans.com</span> <button class="link copy" data-copy="mail-txt" type="button">Copier</button></span></div>
+          <div><span class="muted">Instagram</span><a href="https://www.instagram.com/sachaleemanscreations/" target="_blank" rel="noopener">@sachaleemanscreations</a></div>
+          <div><span class="muted">Atelier</span><span>Retrait sur rendez-vous</span></div>
+          <div><span class="muted">Horaires</span><span>Lun–Ven, 9 h – 17 h</span></div>
+        </div>
+        <div>
+          <h2 style="font-size:var(--fs-xl);margin-bottom:1rem">Questions fréquentes</h2>
+          <div class="acc" id="faq"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMANDE -->
+<div data-view="commande" hidden>
+  <div class="wrap">
+    <div class="crumbs"><a href="#boutique">Boutique</a><span>/</span><span>Commande</span></div>
+    <div class="checkout" id="checkout"></div>
+  </div>
+</div>
+
+<!-- MERCI -->
+<div data-view="merci" hidden>
+  <div class="wrap thanks" id="thanks"></div>
+</div>
+
+<!-- PAGES LÉGALES -->
+<div data-view="livraison" hidden><div class="wrap"><div class="page-hero"><p class="eyebrow">Aide</p><h1>Livraison &amp; retours</h1></div><div class="prose" style="padding-bottom:5rem" id="legal-livraison"></div></div></div>
+<div data-view="cgv" hidden><div class="wrap"><div class="page-hero"><p class="eyebrow">Informations légales</p><h1>Conditions générales de vente</h1></div><div class="prose" style="padding-bottom:5rem" id="legal-cgv"></div></div></div>
+<div data-view="mentions" hidden><div class="wrap"><div class="page-hero"><p class="eyebrow">Informations légales</p><h1>Mentions légales</h1></div><div class="prose" style="padding-bottom:5rem" id="legal-mentions"></div></div></div>
+<div data-view="confidentialite" hidden><div class="wrap"><div class="page-hero"><p class="eyebrow">Informations légales</p><h1>Confidentialité &amp; cookies</h1></div><div class="prose" style="padding-bottom:5rem" id="legal-conf"></div></div></div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="f-top">
+      <div style="display:grid;gap:1rem;align-content:start">
+        <a class="logo" href="#accueil" style="align-items:flex-start"><b>Sacha Leemans</b><small>Créations</small></a>
+        <p class="muted" style="font-size:var(--fs-sm);max-width:36ch">Créations artisanales faites main, en petites séries et pièces uniques.</p>
+        <div class="paylogos" aria-label="Moyens de paiement acceptés"><span>VISA</span><span>MASTERCARD</span><span>BANCONTACT</span><span>PAYPAL</span><span>APPLE PAY</span></div>
+      </div>
+      <div><h4>Boutique</h4><ul id="f-cats"></ul></div>
+      <div><h4>Aide</h4><ul><li><a href="#contact">Contact &amp; FAQ</a></li><li><a href="#livraison">Livraison &amp; retours</a></li><li><a href="#sur-mesure">Commande sur-mesure</a></li><li><a href="#favoris">Mes favoris</a></li></ul></div>
+      <div><h4>L'atelier</h4><ul><li><a href="#atelier">À propos</a></li><li><a href="https://www.instagram.com/sachaleemanscreations/" target="_blank" rel="noopener">Instagram</a></li><li><a href="#cgv">CGV</a></li><li><a href="#mentions">Mentions légales</a></li><li><a href="#confidentialite">Confidentialité</a></li></ul></div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Sacha Leemans Créations. Tous droits réservés.</span>
+      <span>Maquette de démonstration : produits, prix et visuels d'exemple.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Tiroirs -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cart" aria-label="Panier" aria-hidden="true">
+  <div class="drawer-head"><h2>Panier</h2><button class="icon-btn" data-close aria-label="Fermer le panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer-body" id="cart-body"></div>
+  <div class="drawer-foot" id="cart-foot"></div>
+</aside>
+<aside class="drawer left" id="menu" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-head"><span class="logo" style="align-items:flex-start"><b>Sacha Leemans</b><small>Créations</small></span><button class="icon-btn" data-close aria-label="Fermer le menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="drawer-body">
+    <nav class="mnav" aria-label="Menu mobile">
+      <a href="#accueil">Accueil</a><a href="#boutique">Boutique</a><a href="#sur-mesure">Sur-mesure</a><a href="#atelier">L'atelier</a><a href="#favoris">Favoris</a><a href="#contact">Contact</a>
+    </nav>
+    <p class="muted" style="font-size:var(--fs-sm);margin-top:2rem">Livraison offerte dès 60 €. Retours gratuits sous 14 jours.</p>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toast-msg"></span><button id="toast-act" hidden>Voir le panier</button></div>
+
+<div class="cookie" id="cookie" hidden role="dialog" aria-label="Cookies">
+  <p><b>Quelques cookies, pour bien faire.</b> Le panier et vos favoris sont gardés sur cet appareil. Avec votre accord, nous mesurons aussi l'audience pour améliorer la boutique.</p>
+  <div class="acts"><button class="btn btn-primary" data-consent="all">Tout accepter</button><button class="btn btn-ghost" data-consent="min">Uniquement l'essentiel</button><a class="link" href="#confidentialite" style="align-self:center">En savoir plus</a></div>
+</div>
+
+<script>
+(()=>{
+"use strict";
+/* ---------- Données (à remplacer par le vrai catalogue) ---------- */
+const CATS = [
+  {id:"bijoux", name:"Bijoux", c:["#D9C2B3","#8E5B43","#F3E7DE"], m:"galet"},
+  {id:"accessoires", name:"Accessoires", c:["#C9D3C7","#3F5A4E","#EEF2EC"], m:"petale"},
+  {id:"deco", name:"Décoration", c:["#E3DCCF","#9A7B5B","#F7F2EA"], m:"arche"},
+  {id:"coffrets", name:"Coffrets & cadeaux", c:["#D6D3E0","#4E4A6B","#F1EFF6"], m:"coffret"}
+];
+const P = [
+  {id:1, slug:"boucles-galet", name:"Boucles d'oreilles Galet", cat:"bijoux", price:38, stock:6, pop:98, isNew:true, badge:"Best-seller", m:"galet", c:["#E7D3C4","#B07A58","#F6EBE2"],
+   opts:{label:"Finition", values:["Doré à l'or fin","Argent 925"], sw:["#C9A45C","#BFC3C6"]},
+   desc:"Deux petits galets ciselés à la main, légers et doux au toucher. Une forme organique qui se porte tous les jours.",
+   mat:["Laiton doré à l'or fin 24 carats ou argent 925","Crochets hypoallergéniques, sans nickel","Hauteur : 2,8 cm · 3 g la paire"]},
+  {id:2, slug:"collier-rivage", name:"Collier Rivage", cat:"bijoux", price:54, stock:4, pop:90, isNew:true, m:"orbe", c:["#D6E0DD","#3E6D69","#F0F5F3"],
+   opts:{label:"Longueur", values:["40 cm","45 cm","50 cm"]}, perso:true,
+   desc:"Un pendentif rond inspiré des reflets de l'eau, sur une chaîne fine. Gravure d'initiales possible au dos.",
+   mat:["Pendentif en laiton martelé à la main","Chaîne forçat 1 mm","Diamètre du pendentif : 1,6 cm"]},
+  {id:3, slug:"bague-arche", name:"Bague Arche", cat:"bijoux", price:42, stock:2, pop:80, m:"arche", c:["#E6D9C8","#7D5C3E","#F7EFE5"],
+   opts:{label:"Taille", values:["50","52","54","56","58"]},
+   desc:"Une arche fine qui épouse le doigt. Se porte seule ou empilée avec d'autres bagues.",
+   mat:["Argent 925 recyclé","Largeur : 3 mm","Ajustement possible d'une taille sur demande"]},
+  {id:4, slug:"pochette-lin", name:"Pochette en lin brodée", cat:"accessoires", price:45, stock:5, pop:88, isNew:true, m:"vague", c:["#DCE3D5","#55704F","#F2F5EE"],
+   opts:{label:"Coloris", values:["Sauge","Sable","Encre"], sw:["#9FB39A","#D8C3A5","#2F3A45"]}, perso:true,
+   desc:"Pochette en lin lavé, brodée à la main. Parfaite pour un maquillage, des bijoux ou en pochette de soirée.",
+   mat:["100 % lin européen lavé","Doublure coton, fermeture zip laiton","22 × 15 cm · lavable à 30 °C"]},
+  {id:5, slug:"porte-cles-tresse", name:"Porte-clés tressé", cat:"accessoires", price:18, stock:14, pop:70, m:"fil", c:["#E9DDCF","#A0714B","#F8F1E8"],
+   opts:{label:"Coloris", values:["Naturel","Terre","Forêt"], sw:["#E3D3BD","#A0644A","#3C5A48"]},
+   desc:"Tressé à la main en coton recyclé, avec un anneau en laiton. Un petit cadeau qui fait toujours plaisir.",
+   mat:["Coton recyclé","Anneau en laiton brut","Longueur : 12 cm"]},
+  {id:6, slug:"chouchou-petale", name:"Chouchou en soie Pétale", cat:"accessoires", price:16, stock:20, pop:75, m:"petale", c:["#EBD5D1","#B4706A","#F8EDEB"],
+   opts:{label:"Coloris", values:["Rose poudré","Ivoire","Olive"], sw:["#E3B9B2","#F1EBDD","#7C8457"]},
+   desc:"Chouchou en soie de mûrier, doux pour les cheveux et sans marque. Cousu main à l'atelier.",
+   mat:["100 % soie de mûrier 19 mommes","Élastique gainé","Lavage à la main"]},
+  {id:7, slug:"vase-dune", name:"Vase Dune", cat:"deco", price:68, stock:1, pop:92, badge:"Pièce unique", m:"vase", c:["#E4DCCD","#9C7F62","#F5EFE5"],
+   desc:"Vase en grès tourné et émaillé à la main. Pièce unique : la couleur de l'émail varie à chaque cuisson.",
+   mat:["Grès émaillé, cuisson haute température","Étanche, convient aux fleurs fraîches","Hauteur : 18 cm · Ø 10 cm"]},
+  {id:8, slug:"bougie-sous-bois", name:"Bougie Sous-bois", cat:"deco", price:29, stock:9, pop:85, isNew:true, m:"flamme", c:["#D8DED2","#5C6B52","#EFF2EA"],
+   opts:{label:"Format", values:["180 g","300 g"], add:[0,12]},
+   desc:"Bougie coulée à la main dans un contenant en céramique réutilisable. Notes de mousse, cèdre et figue.",
+   mat:["Cire végétale de colza","Mèche en coton, sans plomb","Environ 40 h de combustion (180 g)"]},
+  {id:9, slug:"suspension-fil", name:"Suspension murale Fil", cat:"deco", price:75, stock:3, pop:60, m:"fil", c:["#EEE6DA","#8D7A62","#FAF5EE"],
+   desc:"Tissage mural noué à la main sur une branche de bois flotté. Apporte de la douceur à un mur nu.",
+   mat:["Corde de coton recyclé 3 mm","Branche de bois flotté","Environ 35 × 60 cm"]},
+  {id:10, slug:"coffret-douceur", name:"Coffret Douceur", cat:"coffrets", price:89, stock:5, pop:78, badge:"Idée cadeau", m:"coffret", c:["#DFD9E6","#5E5680","#F4F1F8"],
+   desc:"Le coffret prêt à offrir : boucles Galet, chouchou Pétale et bougie Sous-bois, avec carte manuscrite.",
+   mat:["Boucles Galet dorées","Chouchou en soie, coloris au choix par message","Bougie Sous-bois 180 g"]},
+  {id:11, slug:"carte-cadeau", name:"Carte cadeau", cat:"coffrets", price:25, stock:999, pop:65, m:"carte", c:["#D3DDD9","#2E4A42","#EEF3F1"],
+   opts:{label:"Montant", values:["25 €","50 €","100 €"], add:[0,25,75]},
+   desc:"Laissez choisir. Carte valable un an sur toute la boutique et les créations sur-mesure, envoyée par e-mail.",
+   mat:["Envoi immédiat par e-mail","Valable 12 mois","Utilisable en plusieurs fois"]},
+  {id:12, slug:"barrette-ecume", name:"Barrette Écume", cat:"accessoires", price:22, stock:0, pop:72, m:"orbe", c:["#E1E5E8","#6C7C88","#F3F5F7"],
+   desc:"Barrette en acétate écaille de tortue, polie à la main. Tient même les cheveux épais.",
+   mat:["Acétate de cellulose d'origine végétale","Pince française en acier","Longueur : 8 cm"]}
+];
+const FAQ = [
+  ["Quels sont les délais de livraison ?","Les pièces en stock sont expédiées sous 48 h ouvrées. Comptez ensuite 1 à 3 jours en Belgique et en France, 3 à 5 jours ailleurs en Europe."],
+  ["Puis-je retourner un article ?","Oui, vous disposez de 14 jours après réception pour retourner un article non porté, dans son emballage d'origine. Les pièces personnalisées ne sont ni reprises ni échangées."],
+  ["Comment entretenir mes bijoux ?","Évitez le contact avec l'eau, le parfum et la crème. Rangez-les à l'abri dans leur pochette et frottez-les avec un chiffon doux."],
+  ["Proposez-vous un emballage cadeau ?","Chaque commande part dans un emballage soigné. Vous pouvez ajouter un papier cadeau et un mot manuscrit pour 3 € lors de la commande."],
+  ["Les créations sont-elles vraiment faites main ?","Oui, toutes. C'est pour cela que de légères variations existent d'une pièce à l'autre : elles font partie de leur charme."]
+];
+const LEGAL = {
+  livraison:`<h2>Tarifs</h2><p><strong>Livraison à domicile</strong> : 5,90 € · <strong>Point relais</strong> : 3,90 € · <strong>Retrait à l'atelier</strong> : gratuit, sur rendez-vous.</p><p>La livraison à domicile et en point relais est <strong>offerte dès 60 €</strong> d'achat (après remise).</p><h2>Délais</h2><p>Expédition sous 48 h ouvrées pour les pièces en stock. Les créations sur-mesure ont un délai indiqué sur le devis.</p><h2>Retours</h2><p>14 jours après réception pour changer d'avis. Contactez l'atelier via la page contact avec votre numéro de commande, une étiquette de retour vous est envoyée. Remboursement sous 7 jours après réception du colis.</p>`,
+  cgv:`<p><em>Modèle à faire valider par un professionnel avant mise en ligne.</em></p><h2>1. Objet</h2><p>Les présentes conditions régissent les ventes réalisées sur la boutique en ligne Sacha Leemans Créations.</p><h2>2. Prix</h2><p>Les prix sont indiqués en euros, toutes taxes comprises, hors frais de livraison indiqués avant la validation de la commande.</p><h2>3. Commande et paiement</h2><p>La commande est ferme après paiement via notre prestataire sécurisé. Une confirmation est envoyée par e-mail.</p><h2>4. Droit de rétractation</h2><p>Conformément au droit européen de la consommation, vous disposez de 14 jours pour vous rétracter, sauf pour les articles personnalisés.</p><h2>5. Garanties</h2><p>Les articles bénéficient de la garantie légale de conformité de 2 ans.</p>`,
+  mentions:`<p><em>Informations à compléter avant mise en ligne.</em></p><h2>Éditeur</h2><p>Sacha Leemans Créations — statut juridique, adresse, numéro d'entreprise / TVA, e-mail de contact.</p><h2>Hébergement</h2><p>Nom et adresse de l'hébergeur du site.</p><h2>Propriété intellectuelle</h2><p>L'ensemble des créations, photos et textes de ce site sont la propriété de Sacha Leemans Créations.</p>`,
+  conf:`<h2>Données collectées</h2><p>Nous collectons uniquement les données nécessaires au traitement de vos commandes et demandes : nom, e-mail, adresse de livraison.</p><h2>Cookies</h2><p>Les cookies essentiels conservent votre panier et vos favoris. Les cookies de mesure d'audience ne sont déposés qu'avec votre accord. <button class="link" id="reset-consent" type="button">Modifier mes choix</button></p><h2>Vos droits</h2><p>Vous pouvez accéder à vos données, les rectifier ou les supprimer en écrivant à l'atelier.</p>`
+};
+const FREE_SHIP = 60;
+const SHIP = {domicile:{n:"Livraison à domicile",d:"1 à 3 jours ouvrés",p:5.9}, relais:{n:"Point relais",d:"2 à 4 jours ouvrés",p:3.9}, atelier:{n:"Retrait à l'atelier",d:"Sur rendez-vous, sous 48 h",p:0}};
+const PAY = {carte:"Carte bancaire", bancontact:"Bancontact", paypal:"PayPal", applepay:"Apple Pay"};
+const PROMOS = {BIENVENUE10:.10};
+
+/* ---------- Utilitaires ---------- */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const fmt=new Intl.NumberFormat("fr-BE",{style:"currency",currency:"EUR"});
+const eur=n=>fmt.format(n);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const bySlug=s=>P.find(p=>p.slug===s), byId=i=>P.find(p=>p.id===i);
+const catName=id=>(CATS.find(c=>c.id===id)||{}).name||"";
+const store={get(k,d){try{const v=localStorage.getItem("slc_"+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem("slc_"+k,JSON.stringify(v))}catch(e){}}};
+const S={cart:store.get("cart",[]), favs:store.get("favs",[]), promo:store.get("promo",null), lastOrder:null};
+const save=()=>{store.set("cart",S.cart);store.set("favs",S.favs);store.set("promo",S.promo)};
+
+/* ---------- Visuels génératifs (placeholders des photos produit) ---------- */
+let uid=0;
+function art(o,v=0){
+  const [bg,a,b]=o.c, id="a"+(uid++);
+  const rot=[0,14,-10,6][v%4], sc=[1,1.3,.82,1.12][v%4], dx=[0,-20,15,10][v%4];
+  let s="";
+  switch(o.m){
+    case "galet": s=`<ellipse cx="160" cy="240" rx="62" ry="48" fill="${a}"/><ellipse cx="250" cy="275" rx="54" ry="42" fill="${a}" opacity=".85"/><ellipse cx="145" cy="225" rx="24" ry="15" fill="${b}" opacity=".55"/><ellipse cx="238" cy="262" rx="20" ry="12" fill="${b}" opacity=".5"/><path d="M160 192v-40M250 233v-48" stroke="${a}" stroke-width="3" fill="none"/><circle cx="160" cy="146" r="8" fill="none" stroke="${a}" stroke-width="3"/><circle cx="250" cy="179" r="8" fill="none" stroke="${a}" stroke-width="3"/>`;break;
+    case "orbe": s=`<path d="M110 90 Q200 230 290 90" stroke="${a}" stroke-width="2.5" fill="none"/><circle cx="200" cy="270" r="70" fill="${a}"/><circle cx="200" cy="270" r="48" fill="${b}" opacity=".35"/><circle cx="180" cy="248" r="16" fill="${b}" opacity=".6"/>`;break;
+    case "arche": s=`<path d="M120 360V220a80 80 0 0 1 160 0v140z" fill="${a}"/><path d="M158 360V228a42 42 0 0 1 84 0v132z" fill="${b}" opacity=".9"/><rect x="100" y="360" width="200" height="10" rx="5" fill="${a}" opacity=".6"/>`;break;
+    case "vague": s=`<rect x="95" y="160" width="210" height="160" rx="18" fill="${a}"/>`+[0,1,2,3].map(i=>`<path d="M115 ${200+i*28} q22 -16 44 0 t44 0 t44 0 t44 0" stroke="${b}" stroke-width="3" fill="none" opacity="${.9-i*.15}"/>`).join("")+`<rect x="95" y="160" width="210" height="14" rx="7" fill="${b}" opacity=".35"/>`;break;
+    case "fil": s=`<rect x="100" y="120" width="200" height="8" rx="4" fill="${a}"/>`+Array.from({length:9},(_,i)=>{const x=115+i*21,h=170+Math.sin(i*0.9)*40+(i%2)*30;return `<path d="M${x} 128 C ${x-8} ${180} ${x+8} ${230} ${x} ${128+h}" stroke="${a}" stroke-width="5" stroke-linecap="round" fill="none" opacity="${.65+(i%3)*.12}"/>`}).join("")+`<path d="M110 190 Q200 250 290 190" stroke="${b}" stroke-width="6" fill="none" opacity=".7"/>`;break;
+    case "petale": s=Array.from({length:6},(_,i)=>`<ellipse cx="200" cy="200" rx="34" ry="78" fill="${i%2?b:a}" opacity="${i%2?.75:.9}" transform="rotate(${i*30} 200 260)"/>`).join("")+`<circle cx="200" cy="260" r="22" fill="${b}"/>`;break;
+    case "vase": s=`<path d="M170 140h60v26c0 18 42 38 42 92 0 60-36 102-72 102s-72-42-72-102c0-54 42-74 42-92z" fill="${a}"/><path d="M164 132h72v14h-72z" fill="${a}" opacity=".8"/><path d="M145 250c30 14 80 14 110 0" stroke="${b}" stroke-width="5" fill="none" opacity=".6"/><path d="M200 140 C 230 90 260 80 280 70" stroke="${a}" stroke-width="3" fill="none"/><ellipse cx="282" cy="66" rx="16" ry="8" fill="${a}" transform="rotate(-25 282 66)"/>`;break;
+    case "flamme": s=`<rect x="130" y="220" width="140" height="140" rx="20" fill="${a}"/><rect x="130" y="220" width="140" height="22" rx="11" fill="${b}" opacity=".5"/><path d="M200 214v-18" stroke="${a}" stroke-width="3"/><path d="M200 150c18 22 18 40 0 48c-18-8-18-26 0-48z" fill="#E7A65A"/><path d="M200 168c8 10 8 20 0 26c-8-6-8-16 0-26z" fill="#F7E2B4"/>`;break;
+    case "coffret": s=`<rect x="110" y="200" width="180" height="150" rx="10" fill="${a}"/><rect x="100" y="180" width="200" height="40" rx="8" fill="${a}" opacity=".85"/><rect x="190" y="180" width="20" height="170" fill="${b}"/><path d="M200 180c-30-40-70-30-50-5 10 10 40 8 50 5zM200 180c30-40 70-30 50-5-10 10-40 8-50 5z" fill="${b}"/>`;break;
+    case "carte": s=`<rect x="90" y="170" width="220" height="140" rx="14" fill="${a}"/><text x="200" y="255" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="44" fill="${b}">SL</text><rect x="110" y="282" width="70" height="6" rx="3" fill="${b}" opacity=".6"/>`;break;
+  }
+  return `<svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><filter id="${id}"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .09 0"/></filter><radialGradient id="${id}l" cx=".25" cy=".15" r="1"><stop offset="0" stop-color="#fff" stop-opacity=".45"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><rect width="400" height="500" fill="${bg}"/><ellipse cx="${200+dx}" cy="400" rx="${120*sc}" ry="16" fill="#000" opacity=".07"/><g transform="translate(${200+dx} 260) rotate(${rot}) scale(${sc}) translate(-200 -260)">${s}</g><rect width="400" height="500" fill="url(#${id}l)"/><rect width="400" height="500" filter="url(#${id})"/></svg>`;
+}
+
+/* ---------- Composants ---------- */
+const heart=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>`;
+function card(p){
+  const fav=S.favs.includes(p.id), out=p.stock===0;
+  const badge=out?`<span class="badge out">Épuisé</span>`:p.badge?`<span class="badge">${p.badge}</span>`:p.isNew?`<span class="badge">Nouveau</span>`:"";
+  const sw=p.opts&&p.opts.sw?`<span class="swatches" aria-label="${p.opts.sw.length} coloris">${p.opts.sw.map(c=>`<i style="background:${c}"></i>`).join("")}</span>`:"";
+  return `<article class="card"><div class="media"><a href="#produit-${p.slug}" aria-label="${esc(p.name)}">${art(p)}</a>${badge}
+    <button class="icon-btn fav" data-fav="${p.id}" aria-pressed="${fav}" aria-label="${fav?"Retirer des":"Ajouter aux"} favoris">${heart}</button>
+    ${out?"":`<button class="btn btn-primary quick" data-quick="${p.id}">Ajouter au panier</button>`}</div>
+    <div><div class="meta"><span class="cat-n">${catName(p.cat)}</span>${sw}</div>
+    <h3><a href="#produit-${p.slug}">${esc(p.name)}</a></h3>
+    <div class="meta"><span class="tnum">${p.opts&&p.opts.add?"Dès ":""}${eur(p.price)}</span></div></div></article>`;
+}
+
+/* ---------- Panier ---------- */
+const lineKey=l=>`${l.id}|${l.opt??""}|${l.perso??""}`;
+function unitPrice(l){const p=byId(l.id);let u=p.price;if(p.opts&&p.opts.add&&l.opt!=null)u+=p.opts.add[p.opts.values.indexOf(l.opt)]||0;if(l.perso)u+=5;return u}
+function addToCart(id,opt,perso,qty=1){
+  const p=byId(id); if(!p||p.stock===0)return;
+  if(opt==null&&p.opts)opt=p.opts.values[0];
+  const l={id,opt:opt??null,perso:perso||null,qty};
+  const ex=S.cart.find(x=>lineKey(x)===lineKey(l));
+  const inCart=S.cart.filter(x=>x.id===id).reduce((a,x)=>a+x.qty,0);
+  const room=Math.max(0,p.stock-inCart);
+  if(room===0){toast(p.stock===1?"Pièce unique : elle est déjà dans votre panier.":"Stock maximum atteint pour cet article.");return}
+  const add=Math.min(qty,room);
+  if(ex)ex.qty+=add;else{l.qty=add;S.cart.push(l)}
+  save();renderCart();toast(`${p.name} ajouté au panier`,true);
+}
+function subtotal(){return S.cart.reduce((a,l)=>a+unitPrice(l)*l.qty,0)}
+function totals(ship="domicile",gift=false){
+  const sub=subtotal(), disc=S.promo&&PROMOS[S.promo]?Math.round(sub*PROMOS[S.promo]*100)/100:0, base=sub-disc;
+  let sh=SHIP[ship].p; if(base>=FREE_SHIP&&ship!=="atelier")sh=0; if(!S.cart.length)sh=0;
+  const g=gift?3:0; return {sub,disc,base,sh,g,total:base+sh+g};
+}
+function renderCart(){
+  const n=S.cart.reduce((a,l)=>a+l.qty,0), cc=$("#cart-count");
+  cc.textContent=n; cc.hidden=!n;
+  const fc=$("#fav-count"); fc.textContent=S.favs.length; fc.hidden=!S.favs.length;
+  const body=$("#cart-body"), foot=$("#cart-foot");
+  if(!S.cart.length){
+    body.innerHTML=`<div class="empty"><h3>Votre panier est vide</h3><p>Les créations qui vous plaisent vous attendent dans la boutique.</p><a class="btn btn-primary" href="#boutique" style="margin-top:1.5rem">Découvrir la boutique</a></div>`;
+    foot.hidden=true; return;
+  }
+  foot.hidden=false;
+  body.innerHTML=S.cart.map((l,i)=>{const p=byId(l.id);return `<div class="line"><a class="th" href="#produit-${p.slug}">${art(p)}</a><div style="min-width:0"><h4>${esc(p.name)}</h4>${l.opt?`<small>${p.opts.label} : ${esc(l.opt)}</small>`:""}${l.perso?`<small>Gravure : « ${esc(l.perso)} » (+5 €)</small>`:""}
+    <div class="qty" role="group" aria-label="Quantité"><button data-q="${i}" data-d="-1" aria-label="Diminuer">−</button><output class="tnum">${l.qty}</output><button data-q="${i}" data-d="1" aria-label="Augmenter">+</button></div></div>
+    <div class="right"><span class="tnum">${eur(unitPrice(l)*l.qty)}</span><button class="link" data-rm="${i}" style="font-size:var(--fs-xs)">Retirer</button></div></div>`}).join("");
+  const t=totals(), left=Math.max(0,FREE_SHIP-t.base), pct=Math.min(100,t.base/FREE_SHIP*100);
+  foot.innerHTML=`<div class="ship-bar"><span>${left>0?`Plus que <b class="tnum">${eur(left)}</b> pour la livraison offerte`:`<b>La livraison est offerte</b> pour cette commande`}</span><div class="bar"><i style="width:${pct}%"></i></div></div>
+    <form class="promo" id="promo-form"><label class="sr" for="promo-in">Code promo</label><input type="text" id="promo-in" placeholder="Code promo" value="${S.promo||""}" autocomplete="off"><button class="btn btn-ghost" type="submit">${S.promo?"Retirer":"Appliquer"}</button></form>
+    <div class="totals tnum"><div><span>Sous-total</span><span>${eur(t.sub)}</span></div>${t.disc?`<div><span>Remise ${S.promo}</span><span>−${eur(t.disc)}</span></div>`:""}<div class="muted"><span>Livraison</span><span>Calculée à l'étape suivante</span></div></div>
+    <a class="btn btn-primary btn-block" href="#commande">Commander · <span class="tnum">${eur(t.base)}</span></a>
+    <div class="paylogos" style="justify-content:center"><span>VISA</span><span>MASTERCARD</span><span>BANCONTACT</span><span>PAYPAL</span><span>APPLE PAY</span></div>`;
+}
+
+/* ---------- Tiroirs / toast ---------- */
+let lastFocus=null;
+function openDrawer(id){lastFocus=document.activeElement;closeDrawers(false);const d=$("#"+id);d.classList.add("on");d.setAttribute("aria-hidden","false");$("#overlay").classList.add("on");document.body.style.overflow="hidden";if(id==="menu")$("#btn-menu").setAttribute("aria-expanded","true");setTimeout(()=>{const f=d.querySelector("[data-close]");f&&f.focus()},50)}
+function closeDrawers(restore=true){$$(".drawer").forEach(d=>{d.classList.remove("on");d.setAttribute("aria-hidden","true")});$("#overlay").classList.remove("on");document.body.style.overflow="";$("#btn-menu").setAttribute("aria-expanded","false");if(restore&&lastFocus&&lastFocus.focus)lastFocus.focus()}
+let tt;function toast(msg,withCart=false){$("#toast-msg").textContent=msg;$("#toast-act").hidden=!withCart;const t=$("#toast");t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),3200)}
+
+/* ---------- Vues ---------- */
+function renderHome(){
+  const pick=[1,7,4,8].map(byId);
+  $("#hero-collage").innerHTML=`<div class="ph p1">${art(pick[0],0)}</div><div class="ph p2">${art(pick[1],0)}</div><div class="ph p3">${art(pick[3],1)}</div><div class="tag"><span class="dot"></span>Nouvelle collection disponible</div>`;
+  $("#home-cats").innerHTML=CATS.map(c=>`<a class="cat" href="#boutique-${c.id}">${art(c,1)}<span class="lbl"><b>${c.name}</b><span>${P.filter(p=>p.cat===c.id).length} créations →</span></span></a>`).join("");
+  $("#home-new").innerHTML=P.filter(p=>p.isNew||p.badge).slice(0,8).sort((a,b)=>b.pop-a.pop).slice(0,4).map(card).join("");
+  $("#home-insta").innerHTML=[2,5,9,6,3,10].map((id,i)=>`<a href="https://www.instagram.com/sachaleemanscreations/" target="_blank" rel="noopener" aria-label="Voir la publication sur Instagram">${art(byId(id),i%4)}</a>`).join("");
+  $("#f-cats").innerHTML=CATS.map(c=>`<li><a href="#boutique-${c.id}">${c.name}</a></li>`).join("")+`<li><a href="#boutique">Toute la boutique</a></li>`;
+}
+const F={cat:"tout",q:"",sort:"pop",stock:false};
+function renderShop(){
+  $("#shop-chips").innerHTML=[{id:"tout",name:"Tout"},...CATS].map(c=>`<button class="chip" data-cat="${c.id}" aria-pressed="${F.cat===c.id}">${c.name}</button>`).join("");
+  $("#shop-title").textContent=F.cat==="tout"?"Toutes les créations":catName(F.cat);
+  const q=F.q.trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  let list=P.filter(p=>(F.cat==="tout"||p.cat===F.cat)&&(!F.stock||p.stock>0)&&(!q||(p.name+" "+p.desc+" "+catName(p.cat)).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").includes(q)));
+  const so={pop:(a,b)=>b.pop-a.pop,new:(a,b)=>(b.isNew?1:0)-(a.isNew?1:0)||b.id-a.id,asc:(a,b)=>a.price-b.price,desc:(a,b)=>b.price-a.price}[F.sort];
+  list.sort((a,b)=>(a.stock===0)-(b.stock===0)||so(a,b));
+  $("#shop-count").textContent=`${list.length} création${list.length>1?"s":""}`;
+  $("#shop-grid").innerHTML=list.length?list.map(card).join(""):`<div class="empty" style="grid-column:1/-1"><h3>Aucune création trouvée</h3><p>Essayez un autre mot ou une autre catégorie.</p><button class="btn btn-ghost" id="shop-reset" style="margin-top:1.2rem">Réinitialiser les filtres</button></div>`;
+}
+let PD={opt:null,perso:"",qty:1,view:0};
+function renderProduct(slug){
+  const p=bySlug(slug);
+  if(!p){$("#pdp").innerHTML=`<div class="empty"><h3>Cette création n'existe plus</h3><a class="btn btn-primary" href="#boutique" style="margin-top:1rem">Retour à la boutique</a></div>`;$("#related").innerHTML="";return}
+  PD={opt:p.opts?p.opts.values[0]:null,perso:"",qty:1,view:0,id:p.id};
+  document.title=`${p.name} · Sacha Leemans Créations`;
+  const fav=S.favs.includes(p.id);
+  const st=p.stock===0?`<p class="stock none"><span class="dot"></span>Épuisé pour le moment</p>`:p.stock===1?`<p class="stock low"><span class="dot"></span>Pièce unique, plus qu'un exemplaire</p>`:p.stock<=3?`<p class="stock low"><span class="dot"></span>Plus que ${p.stock} en stock</p>`:`<p class="stock"><span class="dot"></span>En stock, expédié sous 48 h</p>`;
+  $("#pdp").innerHTML=`<nav class="crumbs" aria-label="Fil d'Ariane"><a href="#accueil">Accueil</a><span>/</span><a href="#boutique-${p.cat}">${catName(p.cat)}</a><span>/</span><span>${esc(p.name)}</span></nav>
+  <div class="pdp">
+    <div class="gallery"><div class="main-img" id="pd-main">${art(p,0)}</div>
+      <div class="thumbs" role="group" aria-label="Autres vues">${[0,1,2,3].map(v=>`<button data-view-i="${v}" aria-current="${v===0}" aria-label="Vue ${v+1}">${art(p,v)}</button>`).join("")}</div></div>
+    <div class="buy">
+      <div><p class="eyebrow">${catName(p.cat)}${p.badge?` · ${p.badge}`:""}</p><h1 style="margin-top:.5rem">${esc(p.name)}</h1></div>
+      <p class="price tnum" id="pd-price">${eur(p.price)}</p>
+      ${st}
+      <p class="muted">${esc(p.desc)}</p>
+      ${p.opts?`<div><p class="label" style="margin-bottom:.6rem">${p.opts.label} : <span id="pd-optl" style="font-weight:400">${esc(PD.opt)}</span></p><div class="opts" role="group" aria-label="${p.opts.label}">${p.opts.values.map((v,i)=>`<button class="opt" data-opt="${esc(v)}" aria-pressed="${i===0}">${p.opts.sw?`<i style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${p.opts.sw[i]};margin-right:.45rem;vertical-align:-1px;border:1px solid var(--line)"></i>`:""}${esc(v)}</button>`).join("")}</div></div>`:""}
+      ${p.perso?`<div class="field"><label for="pd-perso">Gravure / broderie d'initiales (+5 €, facultatif)</label><input type="text" id="pd-perso" maxlength="3" placeholder="Ex. : S.L" autocomplete="off"><small class="muted" style="font-size:var(--fs-xs)">3 caractères maximum. Les pièces personnalisées ne sont pas reprises.</small></div>`:""}
+      ${p.stock>0?`<div class="buy-row"><div class="qty" role="group" aria-label="Quantité"><button data-pq="-1" aria-label="Diminuer">−</button><output id="pd-qty" class="tnum">1</output><button data-pq="1" aria-label="Augmenter">+</button></div><button class="btn btn-primary" id="pd-add">Ajouter au panier</button><button class="icon-btn fav" style="position:static;border:1px solid var(--line);width:48px;height:48px" data-fav="${p.id}" aria-pressed="${fav}" aria-label="${fav?"Retirer des":"Ajouter aux"} favoris">${heart}</button></div>`
+      :`<form class="card-box" id="notify-form" novalidate style="gap:.7rem"><p style="font-weight:600">Être prévenue du retour en stock</p><div class="promo"><label class="sr" for="notify-email">E-mail</label><input type="email" id="notify-email" placeholder="votre@email.com" required><button class="btn btn-primary" type="submit">Me prévenir</button></div><span class="err" id="notify-err"></span></form>`}
+      <div class="perks"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/></svg>Livraison offerte dès 60 € · Retrait atelier gratuit</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 0 2.3-5.6"/><path d="M4 4v4h4"/></svg>Retours gratuits sous 14 jours</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg>Emballage cadeau disponible</div></div>
+      <div class="acc">
+        <details open><summary>Matières &amp; dimensions</summary><div class="body"><ul>${p.mat.map(m=>`<li>${esc(m)}</li>`).join("")}</ul></div></details>
+        <details><summary>Entretien</summary><div class="body"><p>Conservez la pièce à l'abri de l'humidité et de la lumière directe. Nettoyez avec un chiffon doux et sec. Chaque création est livrée avec sa fiche d'entretien.</p></div></details>
+        <details><summary>Livraison &amp; retours</summary><div class="body"><p>Expédition sous 48 h ouvrées. Domicile 5,90 €, point relais 3,90 €, offerts dès 60 €. Retours sous 14 jours. <a href="#livraison">Tous les détails</a></p></div></details>
+      </div>
+    </div>
+  </div>`;
+  $("#related").innerHTML=P.filter(x=>x.id!==p.id&&x.stock>0).sort((a,b)=>(b.cat===p.cat)-(a.cat===p.cat)||b.pop-a.pop).slice(0,4).map(card).join("");
+}
+function updatePdPrice(){const p=byId(PD.id);if(!p)return;const u=unitPrice({id:p.id,opt:PD.opt,perso:PD.perso});$("#pd-price").textContent=eur(u*PD.qty)}
+function renderFavs(){
+  const list=S.favs.map(byId).filter(Boolean);
+  $("#fav-grid").innerHTML=list.length?list.map(card).join(""):`<div class="empty" style="grid-column:1/-1"><h3>Aucun favori pour l'instant</h3><p>Touchez le cœur sur une création pour la retrouver ici.</p><a class="btn btn-primary" href="#boutique" style="margin-top:1.2rem">Parcourir la boutique</a></div>`;
+}
+function renderFaq(){$("#faq").innerHTML=FAQ.map(([q,a])=>`<details><summary>${q}</summary><div class="body"><p>${a}</p></div></details>`).join("")}
+
+/* ---------- Commande ---------- */
+const CO={step:1,ship:"domicile",pay:"carte",gift:false,data:{}};
+function renderCheckout(){
+  const el=$("#checkout");
+  if(!S.cart.length){el.innerHTML=`<div class="empty" style="grid-column:1/-1"><h3>Votre panier est vide</h3><p>Ajoutez une création pour passer commande.</p><a class="btn btn-primary" href="#boutique" style="margin-top:1.2rem">Aller à la boutique</a></div>`;return}
+  const d=CO.data, v=k=>esc(d[k]||"");
+  const t=totals(CO.ship,CO.gift);
+  el.innerHTML=`<form id="co-form" novalidate>
+    <ol class="progress">${["Coordonnées","Livraison","Paiement"].map((s,i)=>`<li class="${i+1===CO.step?"on":i+1<CO.step?"done":""}">${s}</li>`).join("")}</ol>
+    <fieldset data-step="1" ${CO.step!==1?"hidden":""}><legend>Vos coordonnées</legend>
+      <div class="field"><label for="co-email">E-mail</label><input type="email" id="co-email" name="email" required autocomplete="email" value="${v("email")}"><span class="err"></span></div>
+      <div class="row c2"><div class="field"><label for="co-first">Prénom</label><input type="text" id="co-first" name="first" required autocomplete="given-name" value="${v("first")}"><span class="err"></span></div>
+      <div class="field"><label for="co-last">Nom</label><input type="text" id="co-last" name="last" required autocomplete="family-name" value="${v("last")}"><span class="err"></span></div></div>
+      <div class="field"><label for="co-addr">Adresse</label><input type="text" id="co-addr" name="addr" required autocomplete="street-address" placeholder="Rue et numéro" value="${v("addr")}"><span class="err"></span></div>
+      <div class="row c3"><div class="field"><label for="co-zip">Code postal</label><input type="text" id="co-zip" name="zip" required inputmode="numeric" autocomplete="postal-code" pattern="[0-9A-Za-z \\-]{4,8}" value="${v("zip")}"><span class="err"></span></div>
+      <div class="field"><label for="co-city">Ville</label><input type="text" id="co-city" name="city" required autocomplete="address-level2" value="${v("city")}"><span class="err"></span></div></div>
+      <div class="row c2"><div class="field"><label for="co-country">Pays</label><select id="co-country" name="country" autocomplete="country-name">${["Belgique","France","Luxembourg","Pays-Bas","Suisse"].map(c=>`<option ${d.country===c?"selected":""}>${c}</option>`).join("")}</select></div>
+      <div class="field"><label for="co-tel">Téléphone (facultatif)</label><input type="tel" id="co-tel" name="tel" autocomplete="tel" value="${v("tel")}"></div></div>
+      <label class="check"><input type="checkbox" id="co-news" name="news" ${d.news?"checked":""}> Recevoir la lettre de l'atelier (une par mois)</label>
+    </fieldset>
+    <fieldset data-step="2" ${CO.step!==2?"hidden":""}><legend>Mode de livraison</legend>
+      ${Object.entries(SHIP).map(([k,s])=>{const free=t.base>=FREE_SHIP&&k!=="atelier";return `<label class="choice"><input type="radio" name="ship" value="${k}" ${CO.ship===k?"checked":""}><span class="grow"><b>${s.n}</b><small>${s.d}</small></span><span class="tnum">${s.p===0||free?"Offert":eur(s.p)}</span></label>`}).join("")}
+      <label class="check" style="margin-top:.5rem"><input type="checkbox" id="co-gift" ${CO.gift?"checked":""}> Ajouter un emballage cadeau et un mot manuscrit (+3 €)</label>
+      <div class="field" id="gift-msg-wrap" ${CO.gift?"":"hidden"}><label for="co-giftmsg">Votre message</label><textarea id="co-giftmsg" name="giftmsg" maxlength="200" style="min-height:90px">${v("giftmsg")}</textarea></div>
+    </fieldset>
+    <fieldset data-step="3" ${CO.step!==3?"hidden":""}><legend>Paiement</legend>
+      ${Object.entries(PAY).map(([k,n])=>`<label class="choice"><input type="radio" name="pay" value="${k}" ${CO.pay===k?"checked":""}><span class="grow"><b>${n}</b></span></label>`).join("")}
+      <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Vous serez redirigée vers la page de paiement sécurisée du prestataire (Stripe ou Mollie). Aucune donnée bancaire ne transite par le site. Dans cette maquette, le paiement est simulé.</p>
+      <div class="card-box" style="gap:.4rem;font-size:var(--fs-sm)"><b>Livraison à</b><span class="muted">${v("first")} ${v("last")}, ${v("addr")}, ${v("zip")} ${v("city")}, ${v("country")||"Belgique"}</span><button class="link" type="button" data-goto="1" style="justify-self:start">Modifier</button></div>
+      <label class="check"><input type="checkbox" id="co-cgv" required> <span>J'accepte les <a href="#cgv">conditions générales de vente</a>.</span></label><span class="err" id="co-cgv-err"></span>
+    </fieldset>
+    <div class="co-nav">${CO.step>1?`<button class="btn btn-ghost" type="button" data-goto="${CO.step-1}">Retour</button>`:`<a class="btn btn-ghost" href="#boutique">Continuer mes achats</a>`}
+      <button class="btn btn-primary" type="submit">${CO.step<3?"Continuer":`Payer <span class="tnum">${eur(t.total)}</span>`}</button></div>
+  </form>
+  <aside class="summary" aria-label="Récapitulatif">
+    <h2>Récapitulatif</h2>
+    <div>${S.cart.map(l=>{const p=byId(l.id);return `<div class="line" style="grid-template-columns:56px 1fr auto;padding-block:.7rem"><div class="th">${art(p)}</div><div style="min-width:0"><h4>${esc(p.name)}</h4><small>${l.opt?esc(l.opt)+" · ":""}${l.perso?"Gravure « "+esc(l.perso)+" » · ":""}Qté ${l.qty}</small></div><span class="tnum" style="font-size:var(--fs-sm)">${eur(unitPrice(l)*l.qty)}</span></div>`}).join("")}</div>
+    <div class="totals tnum"><div><span>Sous-total</span><span>${eur(t.sub)}</span></div>${t.disc?`<div><span>Remise ${S.promo}</span><span>−${eur(t.disc)}</span></div>`:""}<div><span>Livraison</span><span>${t.sh?eur(t.sh):"Offerte"}</span></div>${t.g?`<div><span>Emballage cadeau</span><span>${eur(t.g)}</span></div>`:""}<div class="grand"><span>Total TTC</span><span>${eur(t.total)}</span></div></div>
+    ${S.promo?"":`<p class="note">Un code promo ? Ajoutez-le depuis le panier.</p>`}
+    <div class="paylogos"><span>VISA</span><span>MASTERCARD</span><span>BANCONTACT</span><span>PAYPAL</span><span>APPLE PAY</span></div>
+  </aside>`;
+}
+function grab(form){$$("input,select,textarea",form).forEach(i=>{if(!i.name||i.type==="radio")return;CO.data[i.name]=i.type==="checkbox"?i.checked:i.value})}
+function validate(scope){
+  let ok=true, first=null;
+  $$("input[required],select[required],textarea[required]",scope).forEach(i=>{
+    if(i.closest("[hidden]"))return;
+    let msg="";
+    if(i.type==="checkbox"){if(!i.checked)msg="Merci de cocher cette case pour continuer."}
+    else if(!i.value.trim())msg="Ce champ est requis.";
+    else if(i.type==="email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(i.value.trim()))msg="Adresse e-mail invalide. Exemple : prenom@domaine.com";
+    else if(i.pattern&&!new RegExp("^(?:"+i.pattern+")$").test(i.value.trim()))msg="Code postal invalide.";
+    i.setAttribute("aria-invalid",msg?"true":"false");
+    const err=i.type==="checkbox"?document.getElementById(i.id+"-err"):i.parentElement.querySelector(".err");
+    if(err)err.textContent=msg;
+    if(msg){ok=false;first=first||i}
+  });
+  if(first)first.focus();
+  return ok;
+}
+function placeOrder(){
+  const t=totals(CO.ship,CO.gift);
+  const num="SL-2026-"+String(Math.floor(1000+Math.random()*9000));
+  S.lastOrder={num,total:t.total,email:CO.data.email,first:CO.data.first,ship:SHIP[CO.ship].n,items:S.cart.reduce((a,l)=>a+l.qty,0),pay:PAY[CO.pay]};
+  P.forEach(p=>{const q=S.cart.filter(l=>l.id===p.id).reduce((a,l)=>a+l.qty,0);if(q&&p.stock<999)p.stock=Math.max(0,p.stock-q)});
+  S.cart=[];S.promo=null;save();renderCart();CO.step=1;
+  location.hash="merci";
+}
+function renderThanks(){
+  const o=S.lastOrder;
+  $("#thanks").innerHTML=o?`<div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4.5 4.5L19 7"/></svg></div><p class="eyebrow">Commande ${o.num}</p><h1>Merci ${esc(o.first||"")} !</h1><p class="lead" style="margin-inline:auto">Votre commande de ${o.items} article${o.items>1?"s":""} (<span class="tnum">${eur(o.total)}</span>, ${o.pay}) est confirmée. Un récapitulatif part à <b>${esc(o.email||"")}</b>. Mode choisi : ${o.ship}.</p><p class="muted" style="font-size:var(--fs-sm)">Sacha prépare votre colis à la main, expédition sous 48 h.</p><div style="display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-top:1rem"><a class="btn btn-primary" href="#boutique">Continuer mes achats</a><a class="btn btn-ghost" href="#accueil">Retour à l'accueil</a></div>`
+  :`<h1>Aucune commande en cours</h1><a class="btn btn-primary" href="#boutique">Aller à la boutique</a>`;
+}
+
+/* ---------- Routeur ---------- */
+const TITLES={accueil:"",boutique:"Boutique",favoris:"Favoris","sur-mesure":"Sur-mesure",atelier:"L'atelier",contact:"Contact",commande:"Commande",merci:"Merci",livraison:"Livraison & retours",cgv:"CGV",mentions:"Mentions légales",confidentialite:"Confidentialité"};
+function route(){
+  let h=decodeURIComponent(location.hash.slice(1))||"accueil", view=h;
+  if(h.startsWith("produit-")){view="produit";renderProduct(h.slice(8))}
+  else if(h.startsWith("boutique")){view="boutique";const c=h.slice(9);F.cat=CATS.some(x=>x.id===c)?c:"tout";renderShop()}
+  else if(!TITLES.hasOwnProperty(h)){view="accueil"}
+  if(view==="favoris")renderFavs();
+  if(view==="commande")renderCheckout();
+  if(view==="merci")renderThanks();
+  $$("[data-view]").forEach(s=>s.hidden=s.dataset.view!==view);
+  if(view!=="produit")document.title=(TITLES[view]?TITLES[view]+" · ":"")+"Sacha Leemans Créations";
+  $$("nav.main a").forEach(a=>{const t=a.getAttribute("href").slice(1);a.toggleAttribute("aria-current",view===t);if(view===t)a.setAttribute("aria-current","page")});
+  closeDrawers(false);
+  if(view!==curView||view!=="boutique")window.scrollTo({top:0,behavior:"instant"});
+  curView=view;
+}
+let curView=null;
+
+/* ---------- Événements ---------- */
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button,a"); if(!t)return;
+  if(t.tagName==="A"&&t.getAttribute("href")===location.hash){closeDrawers(false);window.scrollTo({top:0,behavior:"instant"})}
+  if(t.matches("[data-close]")||t.id==="overlay"){closeDrawers();return}
+  if(t.id==="btn-cart"){openDrawer("cart");return}
+  if(t.id==="btn-menu"){openDrawer("menu");return}
+  if(t.id==="btn-search"){if(!location.hash.startsWith("#boutique"))location.hash="boutique";setTimeout(()=>$("#shop-q").focus(),60);return}
+  if(t.id==="toast-act"){openDrawer("cart");$("#toast").classList.remove("on");return}
+  if(t.dataset.fav){const id=+t.dataset.fav,i=S.favs.indexOf(id);if(i>-1)S.favs.splice(i,1);else S.favs.push(id);save();
+    $$(`[data-fav="${id}"]`).forEach(b=>{b.setAttribute("aria-pressed",i===-1);b.setAttribute("aria-label",(i===-1?"Retirer des":"Ajouter aux")+" favoris")});
+    renderCart();toast(i===-1?"Ajouté à vos favoris":"Retiré de vos favoris");if(location.hash==="#favoris")renderFavs();return}
+  if(t.dataset.quick){const p=byId(+t.dataset.quick);addToCart(p.id);return}
+  if(t.dataset.q!=null){const l=S.cart[+t.dataset.q],p=byId(l.id),inCart=S.cart.filter(x=>x.id===l.id).reduce((a,x)=>a+x.qty,0),d=+t.dataset.d;if(d>0&&inCart>=p.stock){toast("Stock maximum atteint pour cet article.");return}l.qty+=d;if(l.qty<1)S.cart.splice(+t.dataset.q,1);save();renderCart();return}
+  if(t.dataset.rm!=null){const l=S.cart.splice(+t.dataset.rm,1)[0];save();renderCart();toast(`${byId(l.id).name} retiré du panier`);return}
+  if(t.dataset.cat){location.hash=t.dataset.cat==="tout"?"boutique":"boutique-"+t.dataset.cat;return}
+  if(t.id==="shop-reset"){F.q="";F.stock=false;$("#shop-q").value="";$("#shop-stock").checked=false;location.hash="boutique";renderShop();return}
+  if(t.dataset.viewI!=null){const p=byId(PD.id);$("#pd-main").innerHTML=art(p,+t.dataset.viewI);$$(".thumbs button").forEach(b=>b.setAttribute("aria-current",b===t));return}
+  if(t.dataset.opt!=null){PD.opt=t.dataset.opt;$$(".opt").forEach(b=>b.setAttribute("aria-pressed",b===t));$("#pd-optl").textContent=PD.opt;updatePdPrice();return}
+  if(t.dataset.pq){const p=byId(PD.id);PD.qty=Math.max(1,Math.min(p.stock,PD.qty+ +t.dataset.pq));$("#pd-qty").textContent=PD.qty;updatePdPrice();return}
+  if(t.id==="pd-add"){addToCart(PD.id,PD.opt,(PD.perso||"").trim()||null,PD.qty);return}
+  if(t.dataset.goto){const f=$("#co-form");grab(f);CO.step=+t.dataset.goto;renderCheckout();window.scrollTo({top:0});return}
+  if(t.dataset.copy){const txt=document.getElementById(t.dataset.copy).textContent;try{navigator.clipboard.writeText(txt).then(()=>toast("Adresse copiée"),()=>sel(t.dataset.copy))}catch(err){sel(t.dataset.copy)}return}
+  if(t.dataset.consent){store.set("consent",t.dataset.consent);$("#cookie").hidden=true;toast(t.dataset.consent==="all"?"Préférences enregistrées":"Seuls les cookies essentiels sont utilisés");return}
+  if(t.id==="reset-consent"){$("#cookie").hidden=false;return}
+});
+function sel(id){const r=document.createRange();r.selectNodeContents(document.getElementById(id));const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Adresse sélectionnée, copiez-la avec Ctrl+C")}
+$("#overlay").addEventListener("click",()=>closeDrawers());
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawers()});
+document.addEventListener("input",e=>{
+  if(e.target.id==="shop-q"){F.q=e.target.value;renderShop()}
+  if(e.target.id==="pd-perso"){PD.perso=e.target.value;updatePdPrice()}
+  if(e.target.matches("[aria-invalid='true']")){e.target.setAttribute("aria-invalid","false");const er=e.target.parentElement.querySelector(".err");if(er)er.textContent=""}
+});
+document.addEventListener("change",e=>{
+  if(e.target.id==="shop-sort"){F.sort=e.target.value;renderShop()}
+  if(e.target.id==="shop-stock"){F.stock=e.target.checked;renderShop()}
+  if(e.target.name==="ship"){grab($("#co-form"));CO.ship=e.target.value;renderCheckout()}
+  if(e.target.name==="pay"){CO.pay=e.target.value}
+  if(e.target.id==="co-gift"){grab($("#co-form"));CO.gift=e.target.checked;renderCheckout()}
+  if(e.target.id==="cu-file"){const n=e.target.files.length;$("#cu-file-info").textContent=n?(n>5?"5 fichiers maximum, merci d'en retirer.":`${n} fichier${n>1?"s":""} sélectionné${n>1?"s":""}.`):"JPG ou PNG, 5 fichiers maximum."}
+});
+document.addEventListener("submit",e=>{
+  e.preventDefault(); const f=e.target;
+  if(f.id==="promo-form"){
+    if(S.promo){S.promo=null;save();renderCart();toast("Code retiré");return}
+    const c=$("#promo-in").value.trim().toUpperCase();
+    if(PROMOS[c]){S.promo=c;save();renderCart();toast(`Code ${c} appliqué : −${PROMOS[c]*100} %`)}else toast("Code inconnu. Essayez BIENVENUE10.");
+    return;
+  }
+  if(f.id==="news-form"){const i=$("#news-email"),ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(i.value.trim());i.setAttribute("aria-invalid",!ok);$("#news-err").textContent=ok?"":"Adresse e-mail invalide. Exemple : prenom@domaine.com";if(ok){f.reset();toast("Bienvenue ! Votre code : BIENVENUE10")}return}
+  if(f.id==="notify-form"){const i=$("#notify-email"),ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(i.value.trim());$("#notify-err").textContent=ok?"":"Adresse e-mail invalide.";if(ok){f.innerHTML=`<p style="font-weight:600">C'est noté.</p><p class="muted" style="font-size:var(--fs-sm)">Vous recevrez un e-mail dès le retour de cette création.</p>`}return}
+  if(f.id==="custom-form"){if(validate(f)){f.reset();$("#cu-file-info").textContent="JPG ou PNG, 5 fichiers maximum.";toast("Demande envoyée. Réponse sous 72 h.")}return}
+  if(f.id==="contact-form"){if(validate(f)){f.reset();toast("Message envoyé. Réponse sous 24 h ouvrées.")}return}
+  if(f.id==="co-form"){
+    const fs=$(`fieldset[data-step="${CO.step}"]`,f);
+    if(!validate(fs))return;
+    grab(f);
+    if(CO.step<3){CO.step++;renderCheckout();window.scrollTo({top:0})}else placeOrder();
+  }
+});
+
+/* ---------- Init ---------- */
+renderHome();renderShop();renderFaq();renderCart();
+$("#custom-art").innerHTML=art({c:["#DCE6E1","#2E4A42","#F0F5F2"],m:"arche"},1);
+$("#about-art").innerHTML=art({c:["#E6DCD1","#8C6A4F","#F6EFE7"],m:"vase"},2);
+$("#legal-livraison").innerHTML=LEGAL.livraison;$("#legal-cgv").innerHTML=LEGAL.cgv;$("#legal-mentions").innerHTML=LEGAL.mentions;$("#legal-conf").innerHTML=LEGAL.conf;
+if(!store.get("consent",null))setTimeout(()=>{$("#cookie").hidden=false},900);
+window.addEventListener("hashchange",route);
+route();
+})();
+</script>
+</body>
+</html>
